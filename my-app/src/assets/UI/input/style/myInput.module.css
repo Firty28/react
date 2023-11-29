@@ -1,0 +1,21 @@
+.myInput {
+    padding: 16px;
+    border: none;
+    background-color: rgb(33, 33, 33);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    -webkit-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+}
+
+.myInput::placeholder {
+    color: #ddd;
+}
+
+.myInput:focus {
+    outline: none;
+    background-color: #555;
+}

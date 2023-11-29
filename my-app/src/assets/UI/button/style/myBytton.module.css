@@ -1,0 +1,24 @@
+.myBtn{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 16px 23px;
+    border: none;
+    background-color: rgb(33, 33, 33);
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+    box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+}
+
+.myBtn:hover {
+    outline: none;
+    background-color: #555;
+}
+
+.myBtn[type="text"]::placeholder {
+    color: #ddd;
+}
