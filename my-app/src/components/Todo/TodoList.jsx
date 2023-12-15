@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const TodoList = ({ allTask, remove }) => {
+const TodoList = ({ allTask }) => {
 
 
 
@@ -10,7 +10,7 @@ const TodoList = ({ allTask, remove }) => {
             <div className='todos'>
                 <ul className="todo-list">
                     {allTask.map((item, index) => (
-                        <Task name={item} index={index} removeFunction={remove} />
+                        <Task name={item} index={index}/>
                     ))}
                 </ul>
             </div>

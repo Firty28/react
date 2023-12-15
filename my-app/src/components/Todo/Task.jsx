@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import MyInput from '../../assets/UI/input/MyInput';
 import MyButton from '../../assets/UI/button/MyButton';
+import { useDispatch } from 'react-redux'
+import { removeTodo } from '../../store/slice/todoSlice.js';
 
-const Task = ({ name, index, removeFunction }) => {
+const Task = ({ name, index }) => {
 
-    const [date, setDate] = useState(new Date());
+    const dispatch = useDispatch()
+
+    const [date] = useState(new Date());
 
     let formatDate = date.toLocaleDateString();
     let formatTime = date.toLocaleTimeString();
@@ -12,7 +16,7 @@ const Task = ({ name, index, removeFunction }) => {
 
     function collbackRemove(e){
         e.preventDefault()
-        removeFunction(index)
+        dispatch(removeTodo(index))
     }
 
     return (
@@ -22,7 +26,7 @@ const Task = ({ name, index, removeFunction }) => {
             <span className="todo-text name-text">{name}</span>
             <span className="todo-text">{formatTime}</span>
             <span className="todo-text">{formatDate}</span>
-            <MyButton onClick={collbackRemove} >Remove</MyButton>
+            <MyButton onClick={(e) => collbackRemove(e)} >Remove</MyButton>
          
 
         </li>

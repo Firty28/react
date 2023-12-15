@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import classes from './style/myBytton.module.css';
 
 const MyButton = (props) => {

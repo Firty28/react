@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const Task = ({ item, index, removeTaskF }) => {
 
-    const [checked, setCheked] = useState('')
+const Task = ({ item, index }) => {
+
+
 
     function getChecked(){
-        console.log(item);
         if (checked === '') {
             setCheked('checked')
         } else if (checked === 'checked'){
@@ -17,7 +17,7 @@ const Task = ({ item, index, removeTaskF }) => {
     return (
         <li key={index} className={checked} onClick={getChecked}>
             {item}
-            <button onClick={() => removeTaskF(index)} className="close">Удалить</button>
+            <button onClick={() => useDispatch(removeTodo())} className="close">Удалить</button>
         </li>
     );
 }
